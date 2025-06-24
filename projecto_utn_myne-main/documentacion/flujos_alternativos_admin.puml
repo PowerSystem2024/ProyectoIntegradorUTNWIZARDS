@@ -1,0 +1,44 @@
+@startuml FlujosAlternativosAdministrador
+
+left to right direction
+skinparam actorStyle awesome
+
+actor Administrador as A
+
+rectangle "Sistema de Gestión de Biblioteca" {
+    usecase "Eliminar usuario" as UC1
+    usecase "Usuario con préstamos activos o pendientes" as FA1
+    usecase "Eliminar categoría" as UC2
+    usecase "Categoría con libros asignados" as FA2
+    usecase "Aprobar/rechazar solicitud" as UC3
+    usecase "Solicitud ya procesada o sin ejemplares/usuario inactivo/vencido" as FA3
+    usecase "Modificar libro" as UC4
+    usecase "Error de validación (CDJ/ISBN duplicado, cantidad menor a préstamos, categoría inexistente)" as FA4
+    usecase "Registrar usuario" as UC5
+    usecase "DNI ya registrado o email inválido" as FA5
+    usecase "Modificar usuario" as UC6
+    usecase "DNI duplicado, email o nivel inválido" as FA6
+    usecase "Registrar libro" as UC7
+    usecase "CDJ/ISBN duplicado, categoría inexistente, cantidad inválida" as FA7
+    usecase "Exportar CSV" as UC8
+    usecase "Error de escritura/exportación" as FA8
+}
+
+A --> UC1
+UC1 --> FA1 : <<extend>>
+A --> UC2
+UC2 --> FA2 : <<extend>>
+A --> UC3
+UC3 --> FA3 : <<extend>>
+A --> UC4
+UC4 --> FA4 : <<extend>>
+A --> UC5
+UC5 --> FA5 : <<extend>>
+A --> UC6
+UC6 --> FA6 : <<extend>>
+A --> UC7
+UC7 --> FA7 : <<extend>>
+A --> UC8
+UC8 --> FA8 : <<extend>>
+
+@enduml 

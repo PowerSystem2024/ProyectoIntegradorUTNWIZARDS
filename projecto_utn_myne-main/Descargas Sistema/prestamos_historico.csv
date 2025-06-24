@@ -1,0 +1,34 @@
+Usuario,CDJ,ISBN,Título,Autor,F. Préstamo,F. Devolución,Estado
+Florencia,097,565656789,Call of Duty All U Doom,Esteban Quito,14-05-2025,29-05-2025,activo
+Franxs,1011,545454789,Los Perez,Andrea,14-05-2025,29-05-2025,activo
+Agustina,1011,545454789,Los Perez,Andrea,14-05-2025,28-05-2025,rechazado
+Florencia,1011,545454789,Los Perez,Andrea,14-05-2025,28-05-2025,activo
+Franco,1011,545454789,Los Perez,Andrea,14-05-2025,28-05-2025,devuelto
+Franco,1011,545454789,Los Perez,Andrea,14-05-2025,28-05-2025,devuelto
+Florencia,1011,545454789,Los Perez,Andrea,14-05-2025,29-05-2025,devuelto
+Franco,098,3211456987,Sousou no frieren,Kamado,14-05-2025,29-05-2025,activo
+Franco,097,565656789,Call of Duty All U Doom,Esteban Quito,14-05-2025,29-05-2025,activo
+Franco,097,565656789,Call of Duty All U Doom,Esteban Quito,14-05-2025,28-05-2025,rechazado
+Franco,097,565656789,Call of Duty All U Doom,Esteban Quito,14-05-2025,29-05-2025,devuelto
+Franco,098,3211456987,Sousou no frieren,Kamado,14-05-2025,28-05-2025,devuelto
+Franco,1011,545454789,Los Perez,Andrea,14-05-2025,29-05-2025,devuelto
+Agustina,1011,545454789,Los Perez,Andrea,14-05-2025,29-05-2025,devuelto
+Franco,097,565656789,Call of Duty All U Doom,Esteban Quito,13-05-2025,28-05-2025,devuelto
+Agustina,1011,545454789,Los Perez,Andrea,12-05-2025,27-05-2025,activo
+Fede,091101,987123654,Fede y Flor las f del amor,Franco,12-05-2025,27-05-2025,devuelto
+Agustina,00123,454545456,Donald Trum Enemigo Publico,Macron,12-05-2025,27-05-2025,activo
+Franco,091,666123456,Las Sombrias Aventuras de Ro y Franco,Florencia Alonso,12-05-2025,27-05-2025,devuelto
+Gustavo,00954,564789123,Frieren,nkj,12-05-2025,27-05-2025,activo
+Gustavo,00123,454545456,Donald Trum Enemigo Publico,Macron,12-05-2025,10-05-2025,activo
+Agustina,097,565656789,Call of Duty All U Doom,Esteban Quito,12-05-2025,27-05-2025,devuelto
+Agustina,098,3211456987,Sousou no frieren,Kamado,12-05-2025,27-05-2025,devuelto
+Franco,097,565656789,Call of Duty All U Doom,Esteban Quito,11-05-2025,26-05-2025,devuelto
+Florencia,097,565656789,Call of Duty All U Doom,Esteban Quito,11-05-2025,10-05-2025,devuelto
+Florencia,097,565656789,Call of Duty All U Doom,Esteban Quito,11-05-2025,10-05-2025,devuelto
+Franco,097,565656789,Call of Duty All U Doom,Esteban Quito,11-05-2025,26-05-2025,devuelto
+Franco,095,123456897,Fakes everywhere,"De los Santos Cardozo, Franco",11-05-2025,26-05-2025,activo
+Franco,1011,545454789,Los Perez,Andrea,11-05-2025,26-05-2025,devuelto
+Franco,095,123456897,Fakes everywhere,"De los Santos Cardozo, Franco",11-05-2025,26-05-2025,rechazado
+Franco,095,123456897,Fakes everywhere,"De los Santos Cardozo, Franco",11-05-2025,26-05-2025,rechazado
+Franco,093,999123456,Dale a tu cuerpo alegria Macarena,Santiago,11-05-2025,26-05-2025,devuelto
+Franco,093,999123456,Dale a tu cuerpo alegria Macarena,Santiago,08-05-2025,26-05-2025,devuelto
