@@ -1,0 +1,32 @@
+@startuml FlujosAlternativosUsuario
+
+left to right direction
+skinparam actorStyle awesome
+
+actor Usuario as U
+
+rectangle "Sistema de Gestión de Biblioteca" {
+    usecase "Iniciar sesión" as UC1
+    usecase "Error de autenticación o usuario inactivo" as FA1
+    usecase "Solicitar préstamo de libro" as UC2
+    usecase "Libro no disponible, préstamos vencidos, límite alcanzado, ya tiene préstamo activo, solicitud rechazada" as FA2
+    usecase "Devolver libro" as UC3
+    usecase "Devolución fuera de plazo, libro/préstamo no encontrado" as FA3
+    usecase "Modificar mis datos" as UC4
+    usecase "Email inválido o contraseña corta" as FA4
+    usecase "Consultar historial" as UC5
+    usecase "Sin resultados" as FA5
+}
+
+U --> UC1
+UC1 --> FA1 : <<extend>>
+U --> UC2
+UC2 --> FA2 : <<extend>>
+U --> UC3
+UC3 --> FA3 : <<extend>>
+U --> UC4
+UC4 --> FA4 : <<extend>>
+U --> UC5
+UC5 --> FA5 : <<extend>>
+
+@enduml 

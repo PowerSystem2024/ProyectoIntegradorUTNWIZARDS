@@ -1,0 +1,120 @@
+@startuml SistemaBiblioteca
+
+' Estilos
+skinparam classAttributeIconSize 0
+skinparam class {
+    BackgroundColor White
+    ArrowColor Black
+    BorderColor Black
+}
+
+' Clases principales
+class SistemaBiblioteca {
+    - db: Database
+    - usuario_actual: Usuario
+    + __init__()
+    + iniciar_sesion()
+    + menu_principal()
+    + ejecutar()
+    + registrar_usuario()
+    + modificar_usuario()
+    + eliminar_usuario()
+    + listar_usuarios()
+    + registrar_libro()
+    + modificar_libro()
+    + eliminar_libro()
+    + buscar_libro()
+    + listar_libros_general()
+    + solicitar_prestamo()
+    + ver_mis_prestamos()
+    + menu_historial_usuario()
+    + aprobar_prestamos_pendientes()
+    + exportar_csv(...)
+    + actualizar_estado_libro_por_disponibilidad(...)
+}
+
+class Database {
+    - conn_params: dict
+    - conn: Connection
+    + __init__(...)
+    + connect()
+    + close()
+    + insert_usuario(usuario: Usuario): bool
+    + get_usuarios(): List[Usuario]
+    + get_usuario(nombre: str): Usuario
+    + actualizar_usuario(usuario: Usuario): bool
+    + eliminar_usuario(usuario_id: int): bool
+    + insert_libro(libro: Libro): tuple
+    + get_libros(): List[Libro]
+    + get_libro(codigo_cdj: str): Libro
+    + actualizar_libro(libro: Libro): bool
+    + eliminar_libro(libro_id: int): bool
+    + insert_prestamo(prestamo: Prestamo): int
+    + get_prestamos_usuario(usuario_id: int): List[Prestamo]
+    + get_prestamos_activos(): List[Prestamo]
+    + get_prestamos_vencidos(): List[Prestamo]
+    + buscar_libros(termino: str): List[Libro]
+    + get_categorias(): List[Categoria]
+    + insert_categoria(categoria: Categoria): bool
+    + actualizar_categoria(categoria: Categoria): bool
+    + eliminar_categoria(categoria_id: int): bool
+    + exportar_csv(...)
+}
+
+class Usuario {
+    + id: int
+    + nombre: str
+    + password: str
+    + nivel: str
+    + dni: str
+    + email: str
+    + telefono: str
+    + direccion: str
+    + estado: str
+    + fecha_registro: datetime
+}
+
+class Libro {
+    + id: int
+    + titulo: str
+    + autor: str
+    + isbn: str
+    + codigo_cdj: str
+    + categoria_id: int
+    + editorial: str
+    + anio_publicacion: int
+    + estado: str
+    + cantidad: int
+    + fecha_registro: datetime
+}
+
+class Prestamo {
+    + id: int
+    + usuario_id: int
+    + libro_id: int
+    + fecha_prestamo: datetime
+    + fecha_devolucion: datetime
+    + fecha_devolucion_real: datetime
+    + estado: str
+    + esta_vencido(): bool
+}
+
+class Categoria {
+    + id: int
+    + nombre: str
+    + descripcion: str
+    + codigo_cdj: str
+}
+
+' Relaciones
+SistemaBiblioteca --> Database
+SistemaBiblioteca --> Usuario : usuario_actual
+Database --> Usuario
+Database --> Libro
+Database --> Prestamo
+Database --> Categoria
+Libro --> Categoria
+Prestamo --> Usuario
+Prestamo --> Libro
+
+@enduml 

@@ -1,0 +1,47 @@
+@startuml CasosDeUsoBiblioteca
+
+left to right direction
+skinparam actorStyle awesome
+
+actor Usuario as U
+actor Administrador as A
+
+rectangle "Sistema de Gestión de Biblioteca" {
+    usecase "Iniciar sesión" as UC1
+    usecase "Consultar libros disponibles" as UC2
+    usecase "Solicitar préstamo de libro" as UC3
+    usecase "Devolver libro" as UC4
+    usecase "Consultar historial de préstamos" as UC5
+    usecase "Consultar préstamos activos/vencidos" as UC6
+    usecase "Registrarse" as UC7
+    usecase "Exportar reportes" as UC8
+    usecase "Aprobar/rechazar solicitudes de préstamo" as UC9
+    usecase "Registrar/modificar/eliminar libro" as UC10
+    usecase "Registrar/modificar/eliminar usuario" as UC11
+    usecase "Registrar/modificar/eliminar categoría" as UC12
+}
+
+U --> UC1
+U --> UC2
+U --> UC3
+U --> UC4
+U --> UC5
+U --> UC6
+
+A --> UC1
+A --> UC2
+A --> UC3
+A --> UC4
+A --> UC5
+A --> UC6
+A --> UC7
+A --> UC8
+A --> UC9
+A --> UC10
+A --> UC11
+A --> UC12
+
+UC3 .> UC2 : <<include>>
+UC9 .> UC3 : <<extend>>
+
+@enduml 
