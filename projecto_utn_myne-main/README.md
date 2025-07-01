@@ -1,5 +1,6 @@
 # 🧙‍♂️✨🧙‍♀️ UTN WIZARDS - Sistema de Gestión de Biblioteca
-
+## 🔗 Enlace del Video presentacion del sistema
+https://youtu.be/SmdXvKHr2w8
 ## 📚 Descripción del Proyecto
 
 Este proyecto es un **Sistema de Gestión de Biblioteca** desarrollado en Python, con persistencia en PostgreSQL y completamente dockerizado para facilitar su despliegue, uso y corrección. Permite la gestión completa de usuarios, libros, préstamos, categorías y reportes, todo desde una aplicación de consola con interfaz intuitiva.
